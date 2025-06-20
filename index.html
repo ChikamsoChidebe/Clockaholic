@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Clockaholic - Premium Watch Collection</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23d4af37' stroke='%23000' stroke-width='2'/><circle cx='50' cy='50' r='3' fill='%23000'/><line x1='50' y1='50' x2='50' y2='25' stroke='%23000' stroke-width='2'/><line x1='50' y1='50' x2='70' y2='50' stroke='%23000' stroke-width='1.5'/></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="stylesheet" href="hero-mobile.css">
+    <link rel="stylesheet" href="desktop-nav.css">
+    <link rel="stylesheet" href="hero-mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="clock-loader">
+                <div class="clock-face">
+                    <div class="hour-hand"></div>
+                    <div class="minute-hand"></div>
+                    <div class="second-hand"></div>
+                </div>
+            </div>
+            <h2>CLOCKAHOLIC</h2>
+            <p>Loading Premium Timepieces...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>CLOCKAHOLIC</h1>
+                <span class="tagline">Premium Timepieces</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search search-icon"></i>
+                <a href="account.html"><i class="fas fa-user user-icon"></i></a>
+                <div class="cart-icon" onclick="goToCart()" style="cursor: pointer;">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>CLOCKAHOLIC</h2>
+            <p>Premium Timepieces</p>
+        </div>
+        
+        <nav class="mobile-menu-nav">
+            <a href="index.html" class="mobile-nav-link active">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="collections.html" class="mobile-nav-link">
+                <i class="fas fa-gem"></i>
+                Collections
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="contact.html" class="mobile-nav-link">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-shopping-bag"></i>
+                Cart <span class="mobile-cart-count">0</span>
+            </a>
+        </nav>
+        
+        <div class="mobile-menu-profile">
+            <div class="profile-section">
+                <div class="profile-info">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-details">
+                        <h3>Welcome Back</h3>
+                        <p>Premium Member</p>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="profile-btn primary">Sign In</button>
+                    <button class="profile-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="https://img.staticdj.com/2391b1bd971ba53bb1d72f4a84c2c1ac.gif" type="video/mp4">
+                <source src="https://img.staticdj.com/2391b1bd971ba53bb1d72f4a84c2c1ac.gif" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-watch"></div>
+                <div class="floating-watch"></div>
+                <div class="floating-watch"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="luxury-badge">
+                    <span class="badge-text">EST. 1990</span>
+                    <div class="badge-shine"></div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Timeless</span>
+                    <span class="title-line">Elegance</span>
+                </h1>
+                <p class="hero-subtitle">Discover our curated collection of premium watches that define sophistication and precision</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50000">0</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Premium Brands</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="30">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="collections.html" class="btn-primary">Explore Collection</a>
+                    <a href="about.html" class="btn-secondary">Watch Our Story</a>
+                </div>
+            </div>
+            <div class="hero-watch">
+                <div class="watch-showcase">
+                    <div class="watch-carousel">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop" alt="Premium Watch" class="hero-watch-img active">
+                        <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=500&h=500&fit=crop" alt="Luxury Watch" class="hero-watch-img">
+                        <img src="https://i.pinimg.com/736x/94/09/54/9409541aa59562ff1b6586a40908d693.jpg" alt="Classic Watch" class="hero-watch-img">
+                    </div>
+                    <div class="watch-glow"></div>
+                    <div class="watch-details">
+                        <h3 class="watch-name">Rolex Submariner</h3>
+                        <p class="watch-price">$8,950</p>
+                    </div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Free Worldwide Shipping</h3>
+                    <p>Complimentary shipping on all orders over $1,000</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Lifetime Warranty</h3>
+                    <p>Comprehensive protection for your investment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Authenticity Guaranteed</h3>
+                    <p>Every timepiece comes with certificate of authenticity</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Expert Support</h3>
+                    <p>Dedicated horological experts at your service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Showcase -->
+    <section class="luxury-showcase">
+        <div class="showcase-background">
+            <div class="luxury-content">
+                <div class="luxury-text">
+                    <h2 class="luxury-title">Crafted for Perfection</h2>
+                    <p class="luxury-description">Each timepiece in our collection represents the pinnacle of horological artistry, where centuries-old traditions meet cutting-edge innovation.</p>
+                    <div class="luxury-features">
+                        <div class="luxury-feature">
+                            <i class="fas fa-gem"></i>
+                            <span>Swiss Movement</span>
+                        </div>
+                        <div class="luxury-feature">
+                            <i class="fas fa-crown"></i>
+                            <span>Premium Materials</span>
+                        </div>
+                        <div class="luxury-feature">
+                            <i class="fas fa-award"></i>
+                            <span>Master Craftsmanship</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="luxury-watch-display">
+                    <div class="rotating-watch">
+                        <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=600&h=600&fit=crop" alt="Luxury Watch">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Collections</h2>
+                <p class="section-subtitle">Handpicked timepieces for the discerning collector</p>
+            </div>
+            
+            <div class="collection-grid">
+                <div class="collection-card luxury">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=400&h=400&fit=crop" alt="Luxury Collection">
+                        <div class="card-overlay">
+                            <h3>Luxury Collection</h3>
+                            <p>Exquisite craftsmanship meets timeless design</p>
+                            <button class="explore-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card sport">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=400&fit=crop" alt="Sport Collection">
+                        <div class="card-overlay">
+                            <h3>Sport Collection</h3>
+                            <p>Built for adventure, designed for style</p>
+                            <button class="explore-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card classic">
+                    <div class="card-image">
+                        <img src="https://i.pinimg.com/736x/2a/be/94/2abe949b147f23776493789a6c6a9742.jpg" alt="Classic Collection">
+                        <div class="card-overlay">
+                            <h3>Classic Collection</h3>
+                            <p>Timeless elegance for every occasion</p>
+                            <button class="explore-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="product-showcase">
+        <div class="container">
+            <div class="showcase-header">
+                <h2>Premium Timepieces</h2>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="luxury">Luxury</button>
+                    <button class="filter-btn" data-filter="sport">Sport</button>
+                    <button class="filter-btn" data-filter="classic">Classic</button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-category="luxury">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop" alt="Rolex Submariner">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rolex Submariner</h3>
+                        <p class="product-category">Luxury</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(127)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$8,950</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=300&h=300&fit=crop" alt="Omega Speedmaster">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <span class="product-badge sale">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Omega Speedmaster</h3>
+                        <p class="product-category">Sport</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$5,200</span>
+                            <span class="current-price">$4,680</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="classic">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/dd/a5/2f/dda52f8419c186ba7d5dfe4ee9121261.jpg" alt="Patek Philippe">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Patek Philippe Calatrava</h3>
+                        <p class="product-category">Classic</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$32,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="luxury">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=300&h=300&fit=crop" alt="Audemars Piguet">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <span class="product-badge limited">Limited</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Audemars Piguet Royal Oak</h3>
+                        <p class="product-category">Luxury</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(203)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$28,900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=300&h=300&fit=crop" alt="TAG Heuer">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>TAG Heuer Monaco</h3>
+                        <p class="product-category">Sport</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(74)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$6,200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="classic">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/c3/55/43/c35543b4d11d78c3812e6630476c7d50.jpg" alt="Cartier">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cartier Santos</h3>
+                        <p class="product-category">Classic</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(98)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$7,850</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>The Art of Timekeeping</h2>
+                    <p>For over three decades, Clockaholic has been at the forefront of luxury timepiece curation. We believe that a watch is more than just an instrument to tell time—it's a statement of character, a piece of art, and a companion for life's most precious moments.</p>
+                    <p>Our expert team travels the world to source the finest watches from renowned manufacturers, ensuring that every piece in our collection meets our exacting standards of quality, craftsmanship, and design.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Premium Brands</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&h=400&fit=crop" alt="Watchmaker">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Be the first to know about new arrivals, exclusive offers, and horological insights</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CLOCKAHOLIC</h3>
+                    <p>Premium timepieces for the discerning collector. Experience the art of fine watchmaking.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="collections.html">Luxury Watches</a></li>
+                        <li><a href="collections.html">Sport Watches</a></li>
+                        <li><a href="collections.html">Classic Timepieces</a></li>
+                        <li><a href="collections.html">Limited Editions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Shipping Info</a></li>
+                        <li><a href="contact.html">Returns</a></li>
+                        <li><a href="contact.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html">Careers</a></li>
+                        <li><a href="about.html">Press</a></li>
+                        <li><a href="about.html">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Clockaholic. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $0.00</span>
+            </div>
+            <a href="cart.html" class="checkout-btn">View Cart</a>
+            <a href="checkout.html" class="checkout-btn" style="margin-top: 10px; background: #4CAF50;">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal">
+        <div class="search-content">
+            <button class="close-search">&times;</button>
+            <input type="text" placeholder="Search for watches..." class="search-input">
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

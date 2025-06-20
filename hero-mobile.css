@@ -1,0 +1,481 @@
+/* Enhanced Mobile Hero Section */
+@media (max-width: 992px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 120px 0 60px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+        padding-top: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-watch {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .watch-showcase {
+        width: 380px;
+        height: 380px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .hero-title {
+        font-size: 3.8rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+        max-width: 600px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 35px;
+        margin: 40px 0;
+    }
+    
+    .stat-item {
+        min-width: 150px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .stat-item:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        padding: 100px 0 50px;
+    }
+    
+    .hero-content {
+        gap: 40px;
+        padding-top: 30px;
+    }
+    
+    .hero-title {
+        font-size: 3.2rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .title-line {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 35px;
+        max-width: 500px;
+    }
+    
+    .luxury-badge {
+        font-size: 0.75rem;
+        padding: 8px 18px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 25px;
+        margin: 35px 0;
+        align-items: center;
+    }
+    
+    .stat-item {
+        min-width: 200px;
+        max-width: 250px;
+        padding: 18px 25px;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 280px;
+        padding: 18px 35px;
+        font-size: 1rem;
+        border-radius: 50px;
+    }
+    
+    .watch-showcase {
+        width: 320px;
+        height: 320px;
+        margin-bottom: 25px;
+    }
+    
+    .watch-carousel {
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        border: 3px solid var(--secondary-color);
+    }
+    
+    .hero-watch-img {
+        border-radius: 50%;
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .hero-watch-img.active {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    
+    .watch-details {
+        bottom: -70px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 15px 25px;
+        border-radius: 15px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .watch-name {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    
+    .watch-price {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    
+    .carousel-dots {
+        gap: 15px;
+        margin-top: 40px;
+    }
+    
+    .dot {
+        width: 15px;
+        height: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        transition: all 0.4s ease;
+    }
+    
+    .dot.active {
+        background: var(--secondary-color);
+        border-color: var(--secondary-color);
+        transform: scale(1.3);
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    }
+    
+    .floating-elements {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 90vh;
+        padding: 80px 0 40px;
+    }
+    
+    .hero-content {
+        gap: 35px;
+        padding-top: 20px;
+    }
+    
+    .hero-title {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin-bottom: 18px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        max-width: 400px;
+    }
+    
+    .luxury-badge {
+        font-size: 0.7rem;
+        padding: 6px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+        margin: 30px 0;
+    }
+    
+    .stat-item {
+        min-width: 180px;
+        max-width: 220px;
+        padding: 15px 20px;
+    }
+    
+    .stat-number {
+        font-size: 1.9rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .hero-buttons {
+        gap: 15px;
+        margin-top: 35px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 250px;
+        padding: 16px 30px;
+        font-size: 0.95rem;
+    }
+    
+    .watch-showcase {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 20px;
+    }
+    
+    .watch-details {
+        bottom: -65px;
+        padding: 12px 20px;
+    }
+    
+    .watch-name {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+    
+    .watch-price {
+        font-size: 1.4rem;
+    }
+    
+    .carousel-dots {
+        gap: 12px;
+        margin-top: 35px;
+    }
+    
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        min-height: 85vh;
+        padding: 70px 0 30px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        max-width: 350px;
+    }
+    
+    .watch-showcase {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .stat-item {
+        min-width: 160px;
+        max-width: 200px;
+        padding: 12px 18px;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 220px;
+        padding: 14px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .watch-details {
+        bottom: -60px;
+        padding: 10px 18px;
+    }
+    
+    .watch-name {
+        font-size: 1.1rem;
+    }
+    
+    .watch-price {
+        font-size: 1.3rem;
+    }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 100vh;
+        padding: 20px 0;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+        padding-top: 10px;
+    }
+    
+    .hero-watch {
+        order: 1;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .watch-showcase {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .hero-stats {
+        flex-direction: row;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .stat-item {
+        min-width: auto;
+        padding: 8px 12px;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .watch-details {
+        bottom: -50px;
+        padding: 8px 15px;
+    }
+    
+    .carousel-dots {
+        margin-top: 25px;
+    }
+}
+
+/* Touch Enhancements for Mobile */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none;
+    }
+    
+    .stat-item:hover {
+        transform: none;
+    }
+    
+    .dot:active {
+        transform: scale(1.5);
+    }
+    
+    .btn-primary:active,
+    .btn-secondary:active {
+        transform: scale(0.98);
+    }
+}
+
+/* High DPI Mobile Displays */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
+    .hero-watch-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    .watch-showcase {
+        border: 4px solid var(--secondary-color);
+    }
+}
+
+/* iOS Safari Specific */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        min-height: -webkit-fill-available;
+    }
+    
+    .watch-showcase {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+/* Android Chrome Specific */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    .hero-content {
+        will-change: transform;
+    }
+    
+    .watch-carousel {
+        will-change: transform;
+    }
+}

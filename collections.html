@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Clockaholic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="desktop-nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1><a href="index.html" style="color: inherit; text-decoration: none;">CLOCKAHOLIC</a></h1>
+                <span class="tagline">Premium Timepieces</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="collections.html" class="nav-link active">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-user user-icon"></i>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>Our Collections</h1>
+            <p>Discover timepieces that define excellence</p>
+        </div>
+    </section>
+
+    <!-- Collections Grid -->
+    <section class="collections-page">
+        <div class="container">
+            <div class="collection-categories">
+                <div class="category-card luxury-category">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=800&h=600&fit=crop" alt="Luxury Collection">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h2>Luxury Collection</h2>
+                                <p>The pinnacle of horological artistry. Each piece represents decades of tradition and innovation, crafted by master artisans using the finest materials.</p>
+                                <div class="category-features">
+                                    <span><i class="fas fa-gem"></i> Premium Materials</span>
+                                    <span><i class="fas fa-crown"></i> Limited Edition</span>
+                                    <span><i class="fas fa-certificate"></i> Swiss Made</span>
+                                </div>
+                                <button class="explore-category-btn">Explore Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card sport-category">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800&h=600&fit=crop" alt="Sport Collection">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h2>Sport Collection</h2>
+                                <p>Built for adventure and precision timing. These robust timepieces combine functionality with style, perfect for the active lifestyle.</p>
+                                <div class="category-features">
+                                    <span><i class="fas fa-tachometer-alt"></i> Chronograph</span>
+                                    <span><i class="fas fa-shield-alt"></i> Water Resistant</span>
+                                    <span><i class="fas fa-mountain"></i> Adventure Ready</span>
+                                </div>
+                                <button class="explore-category-btn">Explore Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card classic-category">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1548181622-6ac3490c2e2b?w=800&h=600&fit=crop" alt="Classic Collection">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h2>Classic Collection</h2>
+                                <p>Timeless elegance that transcends trends. These sophisticated pieces embody traditional watchmaking excellence with contemporary refinement.</p>
+                                <div class="category-features">
+                                    <span><i class="fas fa-history"></i> Timeless Design</span>
+                                    <span><i class="fas fa-star"></i> Heritage Crafts</span>
+                                    <span><i class="fas fa-award"></i> Award Winning</span>
+                                </div>
+                                <button class="explore-category-btn">Explore Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Products -->
+            <div class="featured-products">
+                <h2>Featured Timepieces</h2>
+                <div class="products-showcase">
+                    <div class="product-card featured" data-category="luxury">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Rolex Submariner">
+                            <div class="product-overlay">
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <span class="product-badge new">Featured</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Rolex Submariner</h3>
+                            <p class="product-category">Luxury</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(127)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$8,950</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card featured" data-category="sport">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=400&fit=crop" alt="Omega Speedmaster">
+                            <div class="product-overlay">
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <span class="product-badge sale">Sale</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Omega Speedmaster</h3>
+                            <p class="product-category">Sport</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original-price">$5,200</span>
+                                <span class="current-price">$4,680</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card featured" data-category="classic">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1548181622-6ac3490c2e2b?w=400&h=400&fit=crop" alt="Patek Philippe">
+                            <div class="product-overlay">
+                                <button class="quick-view">Quick View</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <span class="product-badge limited">Limited</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Patek Philippe Calatrava</h3>
+                            <p class="product-category">Classic</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(156)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$32,500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Partners -->
+            <div class="brand-partners">
+                <h2>Our Premium Partners</h2>
+                <div class="brands-grid">
+                    <div class="brand-logo">Rolex</div>
+                    <div class="brand-logo">Patek Philippe</div>
+                    <div class="brand-logo">Audemars Piguet</div>
+                    <div class="brand-logo">Omega</div>
+                    <div class="brand-logo">TAG Heuer</div>
+                    <div class="brand-logo">Cartier</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CLOCKAHOLIC</h3>
+                    <p>Premium timepieces for the discerning collector. Experience the art of fine watchmaking.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#">Luxury Watches</a></li>
+                        <li><a href="#">Sport Watches</a></li>
+                        <li><a href="#">Classic Timepieces</a></li>
+                        <li><a href="#">Limited Editions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Clockaholic. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

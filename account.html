@@ -6,12 +6,17 @@
     <title>Account - Clockaholic</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23d4af37' stroke='%23000' stroke-width='2'/><circle cx='50' cy='50' r='3' fill='%23000'/><line x1='50' y1='50' x2='50' y2='25' stroke='%23000' stroke-width='2'/><line x1='50' y1='50' x2='70' y2='50' stroke='%23000' stroke-width='1.5'/></svg>" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="stylesheet" href="hero-mobile.css">
+    <link rel="stylesheet" href="desktop-nav.css">
+    <link rel="stylesheet" href="hero-mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+   <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <h1>CLOCKAHOLIC</h1>
@@ -25,14 +30,67 @@
             </ul>
             <div class="nav-icons">
                 <i class="fas fa-search search-icon"></i>
-                <i class="fas fa-user user-icon active"></i>
-                <div class="cart-icon">
+                <a href="account.html"><i class="fas fa-user user-icon"></i></a>
+                <div class="cart-icon" onclick="goToCart()" style="cursor: pointer;">
                     <i class="fas fa-shopping-bag"></i>
                     <span class="cart-count">0</span>
                 </div>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>CLOCKAHOLIC</h2>
+            <p>Premium Timepieces</p>
+        </div>
+        
+        <nav class="mobile-menu-nav">
+            <a href="index.html" class="mobile-nav-link active">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="collections.html" class="mobile-nav-link">
+                <i class="fas fa-gem"></i>
+                Collections
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="contact.html" class="mobile-nav-link">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+            <a href="cart.html" class="mobile-nav-link">
+                <i class="fas fa-shopping-bag"></i>
+                Cart <span class="mobile-cart-count">0</span>
+            </a>
+        </nav>
+        
+        <div class="mobile-menu-profile">
+            <div class="profile-section">
+                <div class="profile-info">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-details">
+                        <h3>Welcome Back</h3>
+                        <p>Premium Member</p>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="profile-btn primary">Sign In</button>
+                    <button class="profile-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Account Section -->
     <section class="account-section">

@@ -1,0 +1,59 @@
+/* Force Desktop Navigation Display */
+.nav-menu {
+    display: flex !important;
+    list-style: none !important;
+    gap: 40px !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-menu li {
+    display: block !important;
+}
+
+.nav-link {
+    display: block !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+
+.nav-link:hover {
+    color: #d4af37 !important;
+    background: rgba(212, 175, 55, 0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+.nav-link.active {
+    color: #d4af37 !important;
+    background: rgba(212, 175, 55, 0.15) !important;
+}
+
+/* Ensure visibility on all screen sizes */
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex !important;
+    }
+    
+    .hamburger {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-menu {
+        display: none !important;
+    }
+    
+    .hamburger {
+        display: flex !important;
+    }
+}

@@ -148,6 +148,31 @@
     position: relative;
     z-index: 1;
     background: rgba(212, 175, 55, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-top: -5px;
+}
+
+.mobile-menu-close:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: scale(1.1);
 }
 
 .mobile-menu-header h2 {
@@ -394,8 +419,8 @@
 
 @media (max-width: 480px) {
     .mobile-menu {
-        max-width: 100%;
-        width: 100%;
+        max-width: 320px;
+        width: 85%;
     }
     
     .mobile-menu-header {

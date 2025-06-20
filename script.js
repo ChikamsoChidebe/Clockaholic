@@ -156,6 +156,12 @@ function initializeWebsite() {
     
     // Update mobile cart count initially
     updateMobileCartCount();
+    
+    // Add hamburger click event
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMobileMenu);
+    }
 }
 
 function initializeEventListeners() {

@@ -389,6 +389,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .desktop-nav {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

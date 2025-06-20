@@ -19,22 +19,29 @@
 </head>
 <body>
     <!-- Navigation -->
- <nav class="navbar">
-        <div class="nav-container">
+ <nav class="navbar" style="position: fixed !important; top: 0 !important; width: 100% !important; background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(10px) !important; z-index: 1000 !important; padding: 15px 0 !important;">
+        <div class="nav-container" style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 20px !important; display: flex !important; justify-content: space-between !important; align-items: center !important;">
             <div class="nav-logo">
-                <h1>CLOCKAHOLIC</h1>
-                <span class="tagline">Premium Timepieces</span>
+                <h1 style="font-family: 'Playfair Display', serif !important; color: #ffffff !important; font-size: 1.8rem !important; letter-spacing: 2px !important; margin: 0 !important;">CLOCKAHOLIC</h1>
+                <span class="tagline" style="font-size: 0.7rem !important; color: #d4af37 !important; letter-spacing: 1px !important; text-transform: uppercase !important;">Premium Timepieces</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="collections.html" class="nav-link">Collections</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <ul style="display: flex; list-style: none; gap: 40px; align-items: center; margin: 0; padding: 0;" class="desktop-nav">
+                <style>
+                @media (max-width: 992px) {
+                    .desktop-nav {
+                        display: none;
+                    }
+                }
+            </style>
+                <li style="display: block;"><a href="index.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">Home<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
+                <li style="display: block;"><a href="collections.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">Collections<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
+                <li style="display: block;"><a href="about.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">About<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
+                <li style="display: block;"><a href="contact.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">Contact<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
             </ul>
             <div class="nav-icons">
                 <i class="fas fa-search search-icon"></i>
-                <a href="account.html"><i class="fas fa-user user-icon"></i></a>
-                <div class="cart-icon" onclick="goToCart()" style="cursor: pointer;">
+                <i class="fas fa-user user-icon"></i>
+                <div class="cart-icon">
                     <i class="fas fa-shopping-bag"></i>
                     <span class="cart-count">0</span>
                 </div>
@@ -51,12 +58,17 @@
     <div class="mobile-menu-overlay"></div>
     <div class="mobile-menu">
         <div class="mobile-menu-header">
-            <h2>CLOCKAHOLIC</h2>
-            <p>Premium Timepieces</p>
+            <div>
+                <h2>CLOCKAHOLIC</h2>
+                <p>Premium Timepieces</p>
+            </div>
+            <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
         
         <nav class="mobile-menu-nav">
-            <a href="index.html" class="mobile-nav-link active">
+            <a href="index.html" class="mobile-nav-link">
                 <i class="fas fa-home"></i>
                 Home
             </a>
@@ -94,7 +106,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Checkout Page -->
     <section class="checkout-page">
         <div class="container">

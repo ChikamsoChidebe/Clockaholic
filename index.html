@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="mobile-nav.css">
     <link rel="stylesheet" href="hero-mobile.css">
     <link rel="stylesheet" href="desktop-nav.css">
+    <link rel="stylesheet" href="nav-fix.css">
     <link rel="stylesheet" href="hero-mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -34,17 +35,24 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
+    <nav class="navbar" style="position: fixed; top: 0 !important; width: 100% !important; background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(10px) !important; z-index: 1000 !important; padding: 15px 0 !important;">
+        <div class="nav-container" style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 20px !important; display: flex !important; justify-content: space-between !important; align-items: center !important;">
             <div class="nav-logo">
-                <h1>CLOCKAHOLIC</h1>
-                <span class="tagline">Premium Timepieces</span>
+                <h1 style="font-family: 'Playfair Display', serif !important; color: #ffffff !important; font-size: 1.8rem !important; letter-spacing: 2px !important; margin: 0 !important;">CLOCKAHOLIC</h1>
+                <span class="tagline" style="font-size: 0.7rem !important; color: #d4af37 !important; letter-spacing: 1px !important; text-transform: uppercase !important;">Premium Timepieces</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="collections.html" class="nav-link">Collections</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <ul style="display: flex; list-style: none !important; gap: 40px !important; align-items: center !important; margin: 0 !important; padding: 0 !important;" class="desktop-nav">
+            <style>
+                @media (max-width: 992px) {
+                    .desktop-nav {
+                        display: none !important;
+                    }
+                }
+            </style>
+                <li style="display: block;"><a href="index.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px;">Home</a></li>
+                <li style="display: block;"><a href="collections.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px;">Collections</a></li>
+                <li style="display: block;"><a href="about.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px;">About</a></li>
+                <li style="display: block;"><a href="contact.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px;">Contact</a></li>
             </ul>
             <div class="nav-icons">
                 <i class="fas fa-search search-icon"></i>
@@ -66,8 +74,13 @@
     <div class="mobile-menu-overlay"></div>
     <div class="mobile-menu">
         <div class="mobile-menu-header">
-            <h2>CLOCKAHOLIC</h2>
-            <p>Premium Timepieces</p>
+            <div>
+                <h2>CLOCKAHOLIC</h2>
+                <p>Premium Timepieces</p>
+            </div>
+            <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
         
         <nav class="mobile-menu-nav">

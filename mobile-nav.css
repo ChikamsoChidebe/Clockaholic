@@ -510,6 +510,22 @@
     transition-delay: 0.4s;
 }
 
+.mobile-cart-count {
+    display: inline-block;
+    background: var(--gradient-gold);
+    color: var(--text-dark);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 700;
+    margin-left: 8px;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
 /* Touch Optimizations */
 @media (hover: none) and (pointer: coarse) {
     .mobile-nav-link:hover {

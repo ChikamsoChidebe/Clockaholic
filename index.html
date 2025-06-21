@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="nav-fix.css">
     <link rel="stylesheet" href="hero-mobile.css">
     <link rel="stylesheet" href="loading-fix.css">
+    <link rel="stylesheet" href="header-sticky.css">
+    <link rel="stylesheet" href="mobile-fix.css">
+    <link rel="stylesheet" href="mobile-fix.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -36,7 +39,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar" style="position: fixed; top: 0 !important; width: 100% !important; background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(10px) !important; z-index: 1000 !important; padding: 15px 0 !important;">
+    <nav class="navbar" style="position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(10px) !important; z-index: 99999 !important; padding: 15px 0 !important;">
         <div class="nav-container" style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 20px !important; display: flex !important; justify-content: space-between !important; align-items: center !important;">
             <div class="nav-logo">
                 <h1 style="font-family: 'Playfair Display', serif !important; color: #ffffff !important; font-size: 1.8rem !important; letter-spacing: 2px !important; margin: 0 !important;">CLOCKAHOLIC</h1>
@@ -77,11 +80,8 @@
         <div class="mobile-menu-header">
             <div>
                 <h2>CLOCKAHOLIC</h2>
-                <p>Premium Timepieces</p>
+                <p>Shop your Time</p>
             </div>
-            <button class="mobile-menu-close" onclick="toggleMobileMenu()">
-                <i class="fas fa-times"></i>
-            </button>
         </div>
         
         <nav class="mobile-menu-nav">
@@ -117,8 +117,8 @@
                     </div>
                 </div>
                 <div class="profile-actions">
-                    <button class="profile-btn primary">Sign In</button>
-                    <button class="profile-btn">Register</button>
+                    <a href="account.html"><button class="profile-btn primary">Sign In</button></a>
+                    <a href="account.html"><button class="profile-btn">Register</button></a>
                 </div>
             </div>
         </div>

@@ -78,6 +78,7 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
 .hamburger:hover {
@@ -124,6 +125,8 @@
     overflow-y: auto;
     border-left: 1px solid rgba(212, 175, 55, 0.2);
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    padding-top: 0;
+    padding-top: 75px;
 }
 
 .mobile-menu.active {
@@ -373,16 +376,34 @@
     
     .hamburger {
         display: flex;
+        position: relative;
+        z-index: 10001;
     }
     
     .nav-icons {
         display: none !important;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
     }
 }
 
 @media (max-width: 768px) {
     .mobile-menu {
         max-width: 350px;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
     }
     
     .mobile-menu-header {
@@ -421,6 +442,14 @@
     .mobile-menu {
         max-width: 320px;
         width: 85%;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
     }
     
     .mobile-menu-header {

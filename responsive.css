@@ -2,6 +2,7 @@
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: rgba(26, 26, 26, 0.95);
     backdrop-filter: blur(15px);
@@ -291,12 +292,27 @@
 }
 
 @media (max-width: 992px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(15px);
+        padding: 10px 0;
+    }
+    
     .hamburger {
         display: flex;
     }
     
     .nav-menu {
-        display: flex;
+        display: none;
+    }
+    
+    .nav-icons {
+        display: none;
     }
     
     .hero {
@@ -395,6 +411,17 @@
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(15px);
+        padding: 8px 0;
+    }
+    
     .container {
         padding: 0 20px;
     }
@@ -700,6 +727,17 @@
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(15px);
+        padding: 6px 0;
+    }
+    
     .container {
         padding: 0 15px;
     }

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Clockaholic</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23d4af37' stroke='%23000' stroke-width='2'/><circle cx='50' cy='50' r='3' fill='%23000'/><line x1='50' y1='50' x2='50' y2='25' stroke='%23000' stroke-width='2'/><line x1='50' y1='50' x2='70' y2='50' stroke='%23000' stroke-width='1.5'/></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link rel="stylesheet" href="checkout-styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="stylesheet" href="hero-mobile.css">
+    <link rel="stylesheet" href="desktop-nav.css">
+    <link rel="stylesheet" href="header-sticky.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .confirmation-page {
+            min-height: 100vh;
+            background: var(--bg-light);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .confirmation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 30px;
+            background: var(--text-light);
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .confirmation-icon {
+            width: 100px;
+            height: 100px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .confirmation-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-message {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .order-details {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+        .order-details h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .detail-value {
+            color: var(--text-gray);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--text-dark);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-dark);
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .confirmation-page {
+                padding: 100px 20px 40px;
+            }
+            
+            .confirmation-container {
+                padding: 40px 20px;
+            }
+            
+            .confirmation-title {
+                font-size: 2rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" style="position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(10px) !important; z-index: 99999 !important; padding: 15px 0 !important;">
+        <div class="nav-container" style="max-width: 1200px !important; margin: 0 auto !important; padding: 0 20px !important; display: flex !important; justify-content: space-between !important; align-items: center !important;">
+            <div class="nav-logo">
+                <h1 style="font-family: 'Playfair Display', serif !important; color: #ffffff !important; font-size: 1.8rem !important; letter-spacing: 2px !important; margin: 0 !important;">CLOCKAHOLIC</h1>
+                <span class="tagline" style="font-size: 0.7rem !important; color: #d4af37 !important; letter-spacing: 1px !important; text-transform: uppercase !important;">Premium Timepieces</span>
+            </div>
+            <ul style="display: flex; list-style: none; gap: 40px; align-items: center; margin: 0; padding: 0;" class="desktop-nav">
+                <style>
+                @media (max-width: 992px) {
+                    .desktop-nav {
+                        display: none !important;
+                    }
+                }
+            </style>
+                <li style="display: block;"><a href="index.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">Home<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
+                <li style="display: block;"><a href="collections.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">Collections<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
+                <li style="display: block;"><a href="about.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">About<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
+                <li style="display: block;"><a href="contact.html" style="display: block; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 12px 20px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.color='#d4af37'; this.querySelector('.underline').style.width='100%';" onmouseout="this.style.color='#ffffff'; this.querySelector('.underline').style.width='0';">Contact<span class="underline" style="position: absolute; bottom: 8px; left: 20px; width: 0; height: 2px; background: #d4af37; transition: width 0.3s ease;"></span></a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-user user-icon"></i>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div>
+                <h2>CLOCKAHOLIC</h2>
+                <p>Shop your Time</p>
+            </div>
+        </div>
+        
+        <nav class="mobile-menu-nav">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="collections.html" class="mobile-nav-link">
+                <i class="fas fa-gem"></i>
+                Collections
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="contact.html" class="mobile-nav-link">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+            <a href="cart.html" class="mobile-nav-link">
+                <i class="fas fa-shopping-bag"></i>
+                Cart <span class="mobile-cart-count">0</span>
+            </a>
+        </nav>
+        
+        <div class="mobile-menu-profile">
+            <div class="profile-section">
+                <div class="profile-info">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-details">
+                        <h3>Welcome Back</h3>
+                        <p>Premium Member</p>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <a href="account.html"><button class="profile-btn primary">Sign In</button></a>
+                    <a href="account.html"><button class="profile-btn">Register</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confirmation Page -->
+    <section class="confirmation-page">
+        <div class="confirmation-container">
+            <div class="confirmation-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h1 class="confirmation-title">Order Confirmed!</h1>
+            <p class="confirmation-message">
+                Thank you for your purchase. Your order has been received and is being processed.
+                You will receive a confirmation email shortly with your order details.
+            </p>
+            
+            <div class="order-details">
+                <h3>Order Summary</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Order Number:</span>
+                    <span class="detail-value" id="orderNumber">CL-12345</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Order Date:</span>
+                    <span class="detail-value" id="orderDate"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Payment Method:</span>
+                    <span class="detail-value" id="paymentMethod">Credit Card</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Shipping Method:</span>
+                    <span class="detail-value">Standard Shipping (3-5 business days)</span>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home"></i>
+                    Continue Shopping
+                </a>
+                <a href="#" class="btn-secondary" onclick="trackOrder(); return false;">
+                    <i class="fas fa-truck"></i>
+                    Track Order
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+            document.querySelector('.mobile-menu-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        // Initialize hamburger menu functionality
+        document.querySelector('.hamburger').addEventListener('click', toggleMobileMenu);
+        document.querySelector('.mobile-menu-overlay').addEventListener('click', toggleMobileMenu);
+        
+        // Generate random order number
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate random order number
+            const orderPrefix = "CL-";
+            const orderNumber = orderPrefix + Math.floor(10000 + Math.random() * 90000);
+            document.getElementById('orderNumber').textContent = orderNumber;
+            
+            // Set current date
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('orderDate').textContent = today.toLocaleDateString('en-US', options);
+            
+            // Update cart count
+            document.querySelector('.cart-count').textContent = "0";
+            document.querySelector('.mobile-cart-count').textContent = "0";
+        });
+        
+        function trackOrder() {
+            alert("Order tracking will be available within 24 hours. Please check your email for updates.");
+        }
+    </script>
+</body>
+</html>
